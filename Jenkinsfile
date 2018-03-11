@@ -11,7 +11,7 @@ node('maven') {
   }
   stage('Rollout Dev Image') {
     echo "Rolling out to DEVELOPMENT environment."
-    sh "oc start-build -n dev otcs-otm --from-dir . --follow"
+    sh "oc start-build -n dev otcs-att --from-dir . --follow"
   }
   stage('Code Quality') {
     sh "echo \"Code quality check successful\""
@@ -24,6 +24,6 @@ node('maven') {
   }
   stage('Rollout Beta Image') {
     echo "Rolling out to STAGE environment."
-    sh "oc tag -n stage dev/otcs-otm:latest stage/otcs-otm:blue"
+    sh "oc tag -n stage dev/otcs-att:latest stage/otcs-att:blue"
   }
 }
