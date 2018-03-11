@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <!--INSERT SEED/DEFAULT VALUE-->
+
+    <property name="defaultSystemId"                    value="00000000-0000-0000-0000-000000000100"/>
+    <property name="defaultClientId"                    value="00000000-0000-0000-0000-000000001000"/>
+    <property name="defaultLocationId"                  value="1f438a80-b0df-4342-9c37-3367473aefc0"/>
+    <property name="defaultUserId"                      value="8a25b1fa-36cc-42fe-8195-dab9fd4f3784"/>
+    <property name="defaultPurchasePricelistId"         value="b1e76d5c-e7a3-11e7-8ca8-f01faf1a6a09"/>
+    <property name="defaultSalesPricelistId"            value="b1e7a0ba-e7a3-11e7-8ca8-f01faf1a6a09"/>
+
+<!--    <changeSet id="system_user" author="onn">
+        <insert tableName="a_user">
+            <column name="a_user_id" value="${defaultSystemId}"/>
+            <column name="createdby" value="${defaultSystemId}"/>
+            <column name="updatedby" value="${defaultSystemId}"/>
+            <column name="username" value="System User"/>
+            <column name="email" value="system@juviabos.local"/>
+        </insert>
+    </changeSet>-->
+</databaseChangeLog>

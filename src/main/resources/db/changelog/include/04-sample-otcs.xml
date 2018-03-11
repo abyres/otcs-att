@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="attendance_1" author="onn">
+        <insert tableName="c_attendance">
+            <column name="c_attendance_id" value="0933f786-2054-11e8-9015-b8763f88c3e3"/>
+            <column name="a_bpartner_id" value="0ae17c52-2054-11e8-86b2-b8763f88c3e3"/>
+            <column name="createdby" value="${defaultSystemId}"/>
+            <column name="updatedby" value="${defaultSystemId}"/>
+            <column name="a_location_id" value="${defaultLocationId}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

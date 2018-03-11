@@ -26,6 +26,10 @@
 
     <repositories>
         <repository>
+            <id>openshift-nexus-otcs</id>
+            <url>http://nexus-cicd.192.168.99.100.nip.io/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
             <id>openshift-nexus-mirror</id>
             <url>http://nexus-cicd.192.168.99.100.nip.io/nexus/content/repositories/apache-snapshots/</url>
         </repository>
@@ -36,6 +40,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>net.abyres.tm</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -48,12 +58,21 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
