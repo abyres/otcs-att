@@ -24,6 +24,11 @@ node('maven') {
   }
   stage('Rollout Beta Image') {
     echo "Rolling out to STAGE environment."
+    // delete route to dev environment
+    // delete service to dev environment
+    // delete t
+    sh "oc start-build -n stage otcs-att"
     sh "oc tag -n stage dev/otcs-att:latest stage/otcs-att:blue"
+    sh "oc expose service otcs-att"
   }
 }
